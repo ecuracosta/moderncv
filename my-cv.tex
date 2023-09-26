@@ -9,9 +9,12 @@
 
 % moderncv themes
 \moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
-\moderncvcolor{grey}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% Links
+\usepackage[colorlinks=true, allcolors=dark grey]{hyperref}
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
@@ -123,8 +126,8 @@
 \vspace{3}
 \subsection{Completed studies}
 
-\cventry{2015 -- 2022}{PhD in Biological Sciences Area}{Facultad de Cs. Exactas -- Universidad Naciona de La Plata (UNLP)}{La Plata}{\textit{Approved with special distinction.}}{Thesis titled: ``\textit{Tissue regeneration, a systems biology approach}''}  % arguments 3 to 6 can be left empty
-\cventry{2007--2014}{Bachelor/MSc in Biotechnology and Molecular Biology}{Facultad de Cs. Exactas -- Universidad Naciona de La Plata (UNLP)}{La Plata}{\textit{7.12/10.}}{Thesis titled: ``\textit{Benznidazole: a reliable and efficient model for systems studied through molecular dynamics}''}
+\cventry{2015 -- 2022}{PhD in Biological Sciences Area}{Facultad de Cs. Exactas -- Universidad Naciona de La Plata (UNLP)}{La Plata}{\textit{Approved with special distinction.}}{}%{Thesis titled: ``\textit{Tissue regeneration, a systems biology approach}''}  % arguments 3 to 6 can be left empty
+\cventry{2007--2014}{Bachelor/MSc in Biotechnology and Molecular Biology}{Facultad de Cs. Exactas -- Universidad Naciona de La Plata (UNLP)}{La Plata}{\textit{7.12/10.}}{}%{Thesis titled: ``\textit{Benznidazole: a reliable and efficient model for systems studied through molecular dynamics}''}
 %\cventry{2006}{Bachiller Modalidad Cs.Naturales}{\textsc{Instituto Marianista, Junín, Buenos Aires}}{}{}{}
 %Promedio: 7,89/10.
 
@@ -142,30 +145,36 @@
 \vspace{3}
 \subsection{Projects}
 
-\cventry{2017--present}{Lead Software Developer and Architect}{Systems Biology Group (SysBio).}{}{}{Led the development of SysVert, a pioneering GUI-based Vertex model simulation software for cellular tissue studies.
-\newline{}
-Detailed achievements:
+\cventry{2017--present}{Lead Software Developer and Architect}{Systems Biology Group (SysBio).}{}{}{Led the development of SysVert, a pioneering GUI-based Vertex model simulation software for cellular tissue studies and introduced a unique Voronoi and Delaunay triangulation method for detecting cell-absent regions.
+{}
 \begin{itemize}
-\item Conceptualized and fully developed A user-friendly GUI using PyQt, Qt Creator, complemented with advanced visualization capabilities through glumpy.
-\item Coded real-time, interactive Voronoi diagrams enabling users to dynamically draw, move and adjust cells.
-\item Integrated features for importing micrograph segmentations from image analysis tools and enabling automatic Voronoi diagram generation.
-\item Innovated a unique method for detecting cell-absent regions by Voronoi and Delaunay triangulations.
-\item Crafted advanced simulation controls, incorporating periodic boundary conditions, malleable cell properties, cell division and apoptosis.
-\item Coded on geometric and force computations.
-\item Employed object-oriented programming (OOP) principles to ensure modular, maintainable and scalable code structure.
-\item Seamlessly integrated libraries such as numpy, pandas, matplotlib, geopandas, shapely and pyqtgraph to extend software capabilities and enrich user experience.
+\item Conceptualization and fully development of a user-friendly GUI using PyQt, Qt Creator, complemented with advanced visualization capabilities through glumpy.
+\item Coding real-time, interactive Voronoi diagrams enabling users to dynamically draw, move and adjust cells.
+\item Integration of features for importing micrograph segmentations from image analysis tools and enabling automatic Voronoi diagram generation.
+\item Coding geometric and force computations.
+%\item Employment of object-oriented programming (OOP).
+%\item Seamlessly integration of libraries such as numpy, pandas, matplotlib, geopandas, shapely and pyqtgraph.
+\end{itemize}
+}
+\vspace{10}
+\cventry{April 2023}{Bio x AI Hackathon Winner -- \href{http://hackathon.bio}{hackathon.bio}}{SVM Team.}{}{}{Winning first place in the Bio x AI hackathon with our project \textit{ProteinBind}.
+\begin{itemize}
+  \item Focusing on ML-driven bioinformatics for protein mutation analysis.
+  \item Identifying how mutations alter function and which mutations can be pathogenic.
+  \item Multimodal contrastive learning framework, inspired by the ImageBind model by MetaAI.
+  \item Working with multiple databases.
 \end{itemize}
 }
 
-\cventry{2014--2021}{Main Researcher}{Systems Biology Group (SysBio).}{}{}{Explored the mechanisms of spinal cord regeneration in axolotls, focusing on the unique spatiotemporal patterns of ependymal cell proliferation post-injury. \newline{}
-Detailed achievements:
+\vspace{10}
+\cventry{2014--2021}{Researcher -- \href{https://elifesciences.org/articles/55665}{Published on eLife}}{Systems Biology Group (SysBio).}{}{}{Explored the mechanisms of spinal cord regeneration in axolotls, focusing on the unique spatiotemporal patterns of ependymal cell proliferation post-amputation.{}
 \begin{itemize}
-  \item Developed mathematical models that uncovered a developmental-like program in spinal cord ependymal cells post-amputation.
-  \item Validated the spatiotemporal cell recruitment post-injury through modeling and experimental data, leveraging tools such as PyABC for Approximate Bayesian Computation and data analysis packages like NumPy, SciPy, and Pandas.
-  \item Published findings in eLife producing visual representations and plots using Matplotlib and Seaborn, contributing to the broader understanding of regenerative biology.
+  \item Mathematical models formulation uncovering a developmental-like program.
+  \item Spatiotemporal cell recruitment post-injury validation through experimental data, leveraging tools such as PyABC for Approximate Bayesian Computation and data analysis packages like NumPy, SciPy, and Pandas.
+  \item Published findings producing visual representations using Matplotlib and Seaborn, contributing to the broader understanding of regenerative biology.
   \end{itemize}
 }
-
+\vspace{10}
 %\cventry{2017-2022}{Molecular Analyst}{Systems Biology Group (SysBio).}{}{}{Delved into the intricacies of how TREX1 mutations in lupus patients impact UV sensitivity and DNA damage, culminating in autoimmunity and IFN-1 production.\newline{}
 %Detailed achievements:
 %\begin{itemize}
@@ -191,47 +200,38 @@ Detailed achievements:
 
 \cventry{2016--2023}{Teaching}{Universidad Nacional de La Plata (UNLP)}{}{}{
 \begin{itemize}
-\item Head of practical work in the \textbf{Biophysical Chemistry} course. Part-time, 2021-2023.
-\item Certified Assistant in the \textbf{Biophysical Chemistry} course. Part-time, 2021.
-\item Student Assistant in the \textbf{Biology} course. Part-time, 2016-2021.
+\item Head of practical work in the Biophysical Chemistry course. Part-time, 2021-2023.
+\item Certified Assistant in the Biophysical Chemistry course. Part-time, 2021.
+\item Student Assistant in the Biology course. Part-time, 2016-2021.
 \end{itemize}
 }
-
-\cventry{2022--2023}{App Developer}{Programa de Gobierno, Políticas Públicas y Transformación Social (PIGOPP) -- Universidad Nacional Arturo Jauretche (UNAJ)}{}{}{Developed a mobile application to streamline neighborhood surveys for families and individuals.\newline{}
-Detailed achievements:
+\vspace{10}
+\cventry{2022--2023}{App Developer}{Programa de Gobierno, Políticas Públicas y Transformación Social (PIGOPP) -- Universidad Nacional Arturo Jauretche (UNAJ)}{}{}{Developed a mobile application to streamline surveys.{}
 \begin{itemize}
-\item Designed and implemented a user-friendly mobile application using Kivy in Python to facilitate and standardize surveys.
-\item Integrated a secure login system to authenticate university personnel, ensuring the integrity and confidentiality of the collected data.
-\item Created a dynamic menu interface to seamlessly guide users through a series of survey questions and possible answers, enhancing data accuracy.
-\item Engineered the app to synchronize and update survey responses directly to the university's central database.
-\item Collaborated with interdisciplinary teams, incorporating feedback from sociologists, political scientists and public administrators to refine the app's functionalities.
+\item Design and implementation of a user-friendly mobile application using Kivy in Python.
+\item Engineering the app to logining and updating survey responses directly to the university's central database.
+\item Interdisciplinary teams collaboration, incorporating feedback from sociologists, political scientists and public administrators.
 \end{itemize}
 }
-
+\vspace{10}
 \cventry{2020--2022}{Data and Social Analysis Specialist}{Sistema de Información, Evaluación y Monitoreo de Programas Sociales (SIEMPRO).}{}{}{
-    Engaged in producing socioeconomic information, and monitoring and evaluating social programs to achieve improved living conditions and social justice.
-    \newline{}
-    Detailed achievements:
+    Engaged in producing socioeconomic information, and monitoring and evaluating social programs.{}
     \begin{itemize}
-        \item Contributed to the construction of a dynamic national, provincial and local information system.
-        \item Worked extensively with multiple government databases, employing statistical methodologies for diverse analytical projects.
-        \item Assisted in building interactive geographical visualizations.
-        \item Played an instrumental role in identifying populations with pressing social demands, assessing program coverage, measuring service accessibility and calculating poverty metrics.
-        \item Rendered technical advice for social programs, provincial liaisons and international agreements.
+        \item Contributing to the construction of a dynamic national, provincial and local information system.
+        \item Extensively working with multiple government databases, employing statistical methodologies for diverse analytical projects.
+        \item Building interactive geographical visualizations.
         \item Led the comprehensive redesign and restructuring of the website.
     \end{itemize}
 }
-
+\vspace{10}
 \cventry{2020 -- 2021}{Web Scraping and translation volunteer}{EndCoronavirus.org}{}{}{
-Assisted in a multi-disciplinary effort to combat COVID-19 by developing community-based solutions and promoting them to various stakeholders including policy-makers, businesses and individuals.\newline{}
-Detailed achievements:
+Assisted in a multi-disciplinary effort to combat COVID-19 by developing community-based solutions.{}
 \begin{itemize}
-\item Developed an automated web scraper to efficiently separate the content of web pages into blocks for seamless translation.
-\item Utilized tools and libraries such as requests, urllib, bs4, lxml, and deep\_translator to facilitate the automation process.
-\item Collaborated in addressing challenges related to translation quotas to ensure accurate and timely content translation into multiple languages.
-\item Supported the team in integrating translated content into the website, enhancing accessibility for a global audience.
+\item Automated web scraper development to efficiently separate the content of web pages into blocks for seamless translation.
+\item Utilizing tools and libraries such as requests, urllib, bs4 and lxml.
+\item Supported the team in integrating translated content into the website.
 \end{itemize}}
-
+\vspace{10}
 %\cvitem{2009 -- 2011}{\textbf{Actuación como representante del Claustro de Estudiantes en la Comisión específica de carrera (CEC)} de la Licenciatura en Biotecnología y Biología Molecular.}
 %\cvitem{}{\textsc{Facultad de Cs.Exactas (FCE), Universidad Nacional de La Plata (UNLP).}}
 %\cvitem{}{Nro. de Expediente: 0700-001363 -- 2009 Resolución 0901.}
@@ -381,9 +381,9 @@ Detailed achievements:
 
 %\cventry{7 y 8 de Septiembre de 2012}{7\textsuperscript{mas} Jornadas de Actualización de la Asociación de Psicofarmacología y Neurociencia Argentina}{\textsc{Hotel Dazzler}}{San Martín}{}{Asociación de psicofarmacología y neurociencia argentina (APNA).}
 
+\clearpage
 \section{Computer skills}
 %\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
-
 %\cvitem{Skill matrix}{Alternatively, provide a skill matrix to show off your skills}
 %% Skill matrix as an alternative to rate one's skills, computer or other.
 
@@ -430,22 +430,22 @@ Detailed achievements:
 %% Example usages:
 \cvskillentry*{OS:}{4}{GNU/Linux}{13}{Archlinux and Debian based}% notice the use of the starred command and the optional
 \cvskillentry*{Language:}{5}{Python}{10}{Extensive project experience}
-\cvskillentry*{Packages:}{5}{Pandas}{8}{Involved in almost all my projects}
-\cvskillentry{}{4}{SciPy}{7}{Statistics and diverse applications}
+\cvskillentry*{Packages:}{5}{Pandas}{8}{Data analysis}
+\cvskillentry{}{4}{SciPy}{7}{Statistics and diverse math applications}
 \cvskillentry{}{5}{NumPy}{8}{Data and numerical analysis}
 \cvskillentry{}{5}{Seaborn and matplotlib}{8}{Data visualization}
-\cvskillentry{}{3}{Beautiful Soup and Requests}{4}{Web scraping in personal projects}
+\cvskillentry{}{3}{Beautiful Soup and Requests}{4}{Web scraping}
 \cvskillentry{}{2}{SQLAlchemy}{4}{Limited project usage}
 \cvskillentry{}{4}{PyQt and Qt Creator}{3}{Major solo project}
 \cvskillentry{}{3}{Glumpy}{3}{Major solo project}
-\cvskillentry{}{4}{OpenCV}{3}{Utilized in several projects}
-\cvskillentry{}{2}{PyTorch, Keras and Scikit-learn}{3}{Personal projects mainly}
-\cvskillentry{}{4}{Kivy}{8}{Solo project}
+\cvskillentry{}{4}{OpenCV}{3}{Image analysis}
+\cvskillentry{}{2}{PyTorch, Keras and Scikit-learn}{3}{Machine learning}
+\cvskillentry{}{4}{Kivy}{8}{App development}
 \cvskillentry*{Others:}{4}{git}{6}{Extensive project experience}
 \cvskillentry{}{2}{Hugging Face}{3}{Personal projects mainly}
 \cvskillentry{}{2}{Obsidian}{1}{Already love it}
-\cvskillentry{}{5}{IPython}{8}{Extensively used}
-\cvskillentry{}{5}{PyCharm}{8}{Extensively used}
+\cvskillentry{}{5}{IPython}{8}{Extensive project experience}
+\cvskillentry{}{5}{PyCharm}{8}{Extensive project experience}
 
 %% \cvskill{<0-5>} command
 % \cvitem{\textbackslash{cvskill}:}{Skills can be visually expressed by the \textbackslash{cvskill} command, e.g. \cvskill{2}}
@@ -455,12 +455,12 @@ Detailed achievements:
 \cvitemwithcomment{English}{Advanced}{}
 
 \section{Interests}
-\cvitem{Brewing}{Operated a small brewery for 5 years producing 3,000 liters/month. Now, passionately crafting for friends, family and companions.}
-\cvitem{Basketball}{Passionate about competing and team play. Deep love for the sport.}
-\cvitem{Biking}{Enjoy touring and exploring; improving endurance, scenic views and engaging in deep conversations during rides.}
+\cvitem{Brewing}{Founded a local brewery producing 2,000 liters/month during 8 years.}
+\cvitem{Basketball}{Passionate about competing and team play.}
+\cvitem{Biking}{Enjoy exploring and improving endurance.}
 \cvitem{Gaming}{Engaging in strategic PC games, valuing team-based challenges.}
-\cvitem{Reading}{Fascinated by philosophy, curious about diverse topics and keen on staying updated with recent scientific publications.}
-\cvitem{Learning}{Driven by an insatiable curiosity; constantly seeking knowledge and understanding.}
+\cvitem{Reading}{Fascinated by philosophy and staying updated with scientific publications.}
+\cvitem{Learning}{Insatiable curiosity; constantly seeking knowledge expansion.}
 
 %\section{Extra 1}
 %\cvlistitem{Item 1}
