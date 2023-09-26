@@ -5,12 +5,11 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
 \moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
-\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\moderncvcolor{grey}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
@@ -25,11 +24,11 @@
 % see https://tex.stackexchange.com/a/496643
 \ifxetexorluatex
   \usepackage{fontspec}
-  \usepackage{unicode-math}
   \defaultfontfeatures{Ligatures=TeX}
-  \setmainfont{Latin Modern Roman}
-  \setsansfont{Latin Modern Sans}
-  \setmonofont{Latin Modern Mono}
+  \setmainfont{IBM Plex Sans}
+  \setsansfont{IBM Plex Sans}
+  \setmonofont{IBM Plex Mono}
+  \usepackage{unicode-math}
   \setmathfont{Latin Modern Math}
 \else
   \usepackage[utf8]{inputenc}
@@ -37,65 +36,69 @@
   \usepackage{lmodern}
 \fi
 
+
 % document language
 \usepackage[english]{babel}  % FIXME: using spanish breaks moderncv
 
-% personal data
-\name{John}{Doe}
-\title{Résumé title}                               % optional, remove / comment the line if not wanted
-\born{4 July 1776}                                 % optional, remove / comment the line if not wanted
-\address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
-\phone[mobile]{+1~(234)~567~890}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
-\phone[fixed]{+2~(345)~678~901}
-\phone[fax]{+3~(456)~789~012}
-\email{john@doe.org}                               % optional, remove / comment the line if not wanted
-\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\name{Emanuel\vspace{10}}{Cura~Costa}
+%\title{Résumé title}                               % optional, remove / comment the line if not wanted
+%\born{16 September 1988}                            % optional, remove / comment the line if not wanted
+%\address{Calle 66~431}{B1900BTE}{Argentina}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+54~9~(221)~561~3300}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{ecuracosta@gmail.com}              % optional, remove / comment the line if not wanted
+%\homepage{https://sysbioiflysib.wordpress.com/members/emanuel-cura-costa/}                         % optional, remove / comment the line if not wanted
 
 % Social icons
-\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
-\social[xing]{john\_doe}                           % optional, remove / comment the line if not wanted
+\social[linkedin]{ecuracosta}                         % optional, remove / comment the line if not wanted
+%\social[xing]{john\_doe}                             % optional, remove / comment the line if not wanted
 
-\social[github]{jdoe}                              % optional, remove / comment the line if not wanted
-\social[gitlab]{jdoe}                              % optional, remove / comment the line if not wanted
-\social[codeberg]{jdoe}                            % optional, remove / comment the line if not wanted
-\social[bitbucket]{jdoe}                           % optional, remove / comment the line if not wanted
-\social[stackoverflow]{0000000/johndoe}            % optional, remove / comment the line if not wanted
+\social[github]{ecuracosta}                         % optional, remove / comment the line if not wanted
+%\social[gitlab]{jdoe}                              % optional, remove / comment the line if not wanted
+%\social[codeberg]{jdoe}                            % optional, remove / comment the line if not wanted
+%\social[bitbucket]{jdoe}                           % optional, remove / comment the line if not wanted
+%\social[stackoverflow]{0000000/johndoe}            % optional, remove / comment the line if not wanted
 
-\social[skype]{jdoe}                               % optional, remove / comment the line if not wanted
-\social[orcid]{0000-0000-000-000}                  % optional, remove / comment the line if not wanted
-\social[researchgate]{jdoe}                        % optional, remove / comment the line if not wanted
-\social[researcherid]{jdoe}                        % optional, remove / comment the line if not wanted
-\social[googlescholar]{googlescholarid}            % optional, remove / comment the line if not wanted
+%\social[skype]{jdoe}                               % optional, remove / comment the line if not wanted
+%\social[orcid]{0000-0002-7030-2077}                 % optional, remove / comment the line if not wanted
+%\social[researchgate]{Emanuel-Cura-Costa}           % optional, remove / comment the line if not wanted
+%\social[researcherid]{jdoe}                        % optional, remove / comment the line if not wanted
+%\social[googlescholar]{q_N6118AAAAJ}             % optional, remove / comment the line if not wanted
 
-\social[twitter]{ji\_doe}                          % optional, remove / comment the line if not wanted
-\social[mastodon]{mastodon.social/web/@user}       % optional, remove / comment the line if not wanted
-\social[telegram]{jdoe}                            % optional, remove / comment the line if not wanted
-\social[whatsapp]{12345678901}                     % optional, remove / comment the line if not wanted
-\social[signal]{12345678901}                       % optional, remove / comment the line if not wanted
-\social[matrix]{@johndoe:matrix.org}               % optional, remove / comment the line if not wanted
-\social[discord]{jdoe\#0000}                       % optional, remove / comment the line if not wanted
+%\social[twitter]{CuraCosta}                          % optional, remove / comment the line if not wanted
+%\social[telegram]{jdoe}                            % optional, remove / comment the line if not wanted
+%\social[whatsapp]{12345678901}                     % optional, remove / comment the line if not wanted
+%\social[signal]{12345678901}                       % optional, remove / comment the line if not wanted
+%\social[matrix]{@johndoe:matrix.org}               % optional, remove / comment the line if not wanted
+%\social[discord]{jdoe\#0000}                       % optional, remove / comment the line if not wanted
 
 % YouTube links can take several forms, depending on how your account and channel are set up.
 % See https://support.google.com/youtube/answer/6180214 for more information.
-\social[youtube]{c/jdoeschannel}                   % optional, remove / comment the line if not wanted; Custom URL             - can be shorted by removing 'c/'
-\social[youtube]{channel/XXXXXX}                   % optional, remove / comment the line if not wanted; Channel URL (ID-based) - can not be shortened
-\social[youtube]{user/jdoe}                        % optional, remove / comment the line if not wanted; Legacy username URL    - if jdoe is not already claimed by a Custom URL, can be shortened by removing 'user/'
+%\social[youtube]{c/jdoeschannel}                   % optional, remove / comment the line if not wanted; Custom URL             - can be shorted by removing 'c/'
+%\social[youtube]{channel/XXXXXX}                   % optional, remove / comment the line if not wanted; Channel URL (ID-based) - can not be shortened
+%\social[youtube]{user/jdoe}                        % optional, remove / comment the line if not wanted; Legacy username URL    - if jdoe is not already claimed by a Custom URL, can be shortened by removing 'user/'
 
-\social[twitch]{jdoe}                              % optional, remove / comment the line if not wanted
-\social[tiktok]{jdoe}                              % optional, remove / comment the line if not wanted
-\social[instagram]{jdoe}                           % optional, remove / comment the line if not wanted
+%\social[twitch]{jdoe}                              % optional, remove / comment the line if not wanted
+%\social[tiktok]{jdoe}                              % optional, remove / comment the line if not wanted
+%\social[instagram]{jdoe}                           % optional, remove / comment the line if not wanted
 
-\social[soundcloud]{jdoe}                          % optional, remove / comment the line if not wanted
+%\social[soundcloud]{jdoe}                          % optional, remove / comment the line if not wanted
 
-\social[steam]{jdoe}                               % optional, remove / comment the line if not wanted
-\social[xbox]{jdoe}                                % optional, remove / comment the line if not wanted
-\social[playstation]{jdoe}                         % optional, remove / comment the line if not wanted
-\social[battlenet]{jdoe\#0000}                     % optional, remove / comment the line if not wanted
+%\social[steam]{jdoe}                               % optional, remove / comment the line if not wanted
+%\social[xbox]{jdoe}                                % optional, remove / comment the line if not wanted
+%\social[playstation]{jdoe}                         % optional, remove / comment the line if not wanted
+%\social[battlenet]{jdoe\#0000}                     % optional, remove / comment the line if not wanted
 
 
-\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+\photo[90][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{"Organization overcomes time" \\
+%\hspace{33}--- Juan Domingo Perón}                                 % optional, remove / comment the line if not wanted
 
 % bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
 %   to show numerical labels in the bibliography (default is to show no labels)
@@ -107,60 +110,281 @@
 % bibliography with mutiple entries
 %\usepackage{multibib}
 %\newcites{book,misc}{{Books},{Others}}
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%	CONTENT
+%----------------------------------------------------------------------------------------
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
-\section{Education}
-\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
-\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+\section{Academic experience}
 
-\section{Master thesis}
-\cvitem{title}{\emph{Title}}
-\cvitem{supervisors}{Supervisors}
-\cvitem{description}{Short thesis abstract}
+\vspace{3}
+\subsection{Completed studies}
 
-\section{Experience}
-\subsection{Vocational}
-\cventry{year--year}{Job title}{Employer}{City}{}{General description no longer than 1--2 lines.\newline{}
+\cventry{2015 -- 2022}{PhD in Biological Sciences Area}{Facultad de Cs. Exactas -- Universidad Naciona de La Plata (UNLP)}{La Plata}{\textit{Approved with special distinction.}}{Thesis titled: ``\textit{Tissue regeneration, a systems biology approach}''}  % arguments 3 to 6 can be left empty
+\cventry{2007--2014}{Bachelor/MSc in Biotechnology and Molecular Biology}{Facultad de Cs. Exactas -- Universidad Naciona de La Plata (UNLP)}{La Plata}{\textit{7.12/10.}}{Thesis titled: ``\textit{Benznidazole: a reliable and efficient model for systems studied through molecular dynamics}''}
+%\cventry{2006}{Bachiller Modalidad Cs.Naturales}{\textsc{Instituto Marianista, Junín, Buenos Aires}}{}{}{}
+%Promedio: 7,89/10.
+
+\vspace{3}
+\subsection{Incompleted studies}
+
+\cventry{2012--2013}{Bachelor/MSc in computer science}{Facultad de Informática -- Universidad Naciona de La Plata (UNLP)}{La Plata}{\textit{20\%.}}{}
+
+%\section{Master thesis}
+%\cvitem{title}{\emph{Title}}
+%\cvitem{supervisors}{Supervisors}
+%\cvitem{description}{Short thesis abstract}
+
+\section{Professional experience}
+\vspace{3}
+\subsection{Projects}
+
+\cventry{2017--present}{Lead Software Developer and Architect}{Systems Biology Group (SysBio).}{}{}{Led the development of SysVert, a pioneering GUI-based Vertex model simulation software for cellular tissue studies.
+\newline{}
 Detailed achievements:
 \begin{itemize}
-\item Achievement 1
-\item Achievement 2 (with sub-achievements)
-  \begin{itemize}
-  \item Sub-achievement (a);
-  \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
-    \begin{itemize}
-    \item Sub-sub-achievement i;
-    \item Sub-sub-achievement ii;
-    \item Sub-sub-achievement iii;
-    \end{itemize}
-  \item Sub-achievement (c);
-  \end{itemize}
-\item Achievement 3
-\item Achievement 4
-\end{itemize}}
-\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2\newline{}Description line 3}
-\subsection{Miscellaneous}
-\cventry{year--year}{Job title}{Employer}{City}{}{Description}
+\item Conceptualized and fully developed A user-friendly GUI using PyQt, Qt Creator, complemented with advanced visualization capabilities through glumpy.
+\item Coded real-time, interactive Voronoi diagrams enabling users to dynamically draw, move and adjust cells.
+\item Integrated features for importing micrograph segmentations from image analysis tools and enabling automatic Voronoi diagram generation.
+\item Innovated a unique method for detecting cell-absent regions by Voronoi and Delaunay triangulations.
+\item Crafted advanced simulation controls, incorporating periodic boundary conditions, malleable cell properties, cell division and apoptosis.
+\item Coded on geometric and force computations.
+\item Employed object-oriented programming (OOP) principles to ensure modular, maintainable and scalable code structure.
+\item Seamlessly integrated libraries such as numpy, pandas, matplotlib, geopandas, shapely and pyqtgraph to extend software capabilities and enrich user experience.
+\end{itemize}
+}
 
-\section{Languages}
-\cvitemwithcomment{Language 1}{Skill level}{Comment}
-\cvitemwithcomment{Language 2}{Skill level}{Comment}
-\cvitemwithcomment{Language 3}{Skill level}{Comment}
-\cvitemwithcomment{Language 4}{Skill level}{Comment}
+\cventry{2014--2021}{Main Researcher}{Systems Biology Group (SysBio).}{}{}{Explored the mechanisms of spinal cord regeneration in axolotls, focusing on the unique spatiotemporal patterns of ependymal cell proliferation post-injury. \newline{}
+Detailed achievements:
+\begin{itemize}
+  \item Developed mathematical models that uncovered a developmental-like program in spinal cord ependymal cells post-amputation.
+  \item Validated the spatiotemporal cell recruitment post-injury through modeling and experimental data, leveraging tools such as PyABC for Approximate Bayesian Computation and data analysis packages like NumPy, SciPy, and Pandas.
+  \item Published findings in eLife producing visual representations and plots using Matplotlib and Seaborn, contributing to the broader understanding of regenerative biology.
+  \end{itemize}
+}
+
+%\cventry{2017-2022}{Molecular Analyst}{Systems Biology Group (SysBio).}{}{}{Delved into the intricacies of how TREX1 mutations in lupus patients impact UV sensitivity and DNA damage, culminating in autoimmunity and IFN-1 production.\newline{}
+%Detailed achievements:
+%\begin{itemize}
+%\item Pioneered the measurement of dihedral angles from atomic coordinates of specific DNA structures, enhancing understanding of DNA damage dynamics.
+%\item Computed and analyzed the angles indicating collinearity and coplanarity based on deposited structures in the protein data bank.
+%\item Extracted insights from the calculated dihedral angles about the structural characteristics and mutations in DNA leading to enhanced UV-induced damage.
+%\item Contributed significantly to understanding the linkage between DNA damage, UV exposure, and the flare-up of lupus symptoms in TREX1 mutation patients.
+%\end{itemize}
+%}
+%
+%\cventry{2013-2017}{Molecular Modeler}{Systems Biology Group (SysBio).}{}{}{Conducted in-depth research into familial chilblain lupus associated with STING mutations and their implications in type I IFN-dependent disorders.\newline{}
+%Detailed achievements:
+%\begin{itemize}
+%\item Utilized advanced molecular modeling techniques, including homology modeling, to understand the structural aspects of STING mutations.
+%\item Performed docking simulations to elucidate the enhanced homodimerisation characteristics of mutant STING.
+%\item Contributed to the understanding that a gain-of-function mutation in STING can cause familial chilblain lupus.
+%\item Assisted in providing evidence suggesting therapeutic value of JAK inhibition for such conditions.
+%\end{itemize}
+%}
+
+\vspace{3}
+\subsection{Miscellaneous}
+
+\cventry{2016--2023}{Teaching}{Universidad Nacional de La Plata (UNLP)}{}{}{
+\begin{itemize}
+\item Head of practical work in the \textbf{Biophysical Chemistry} course. Part-time, 2021-2023.
+\item Certified Assistant in the \textbf{Biophysical Chemistry} course. Part-time, 2021.
+\item Student Assistant in the \textbf{Biology} course. Part-time, 2016-2021.
+\end{itemize}
+}
+
+\cventry{2022--2023}{App Developer}{Programa de Gobierno, Políticas Públicas y Transformación Social (PIGOPP) -- Universidad Nacional Arturo Jauretche (UNAJ)}{}{}{Developed a mobile application to streamline neighborhood surveys for families and individuals.\newline{}
+Detailed achievements:
+\begin{itemize}
+\item Designed and implemented a user-friendly mobile application using Kivy in Python to facilitate and standardize surveys.
+\item Integrated a secure login system to authenticate university personnel, ensuring the integrity and confidentiality of the collected data.
+\item Created a dynamic menu interface to seamlessly guide users through a series of survey questions and possible answers, enhancing data accuracy.
+\item Engineered the app to synchronize and update survey responses directly to the university's central database.
+\item Collaborated with interdisciplinary teams, incorporating feedback from sociologists, political scientists and public administrators to refine the app's functionalities.
+\end{itemize}
+}
+
+\cventry{2020--2022}{Data and Social Analysis Specialist}{Sistema de Información, Evaluación y Monitoreo de Programas Sociales (SIEMPRO).}{}{}{
+    Engaged in producing socioeconomic information, and monitoring and evaluating social programs to achieve improved living conditions and social justice.
+    \newline{}
+    Detailed achievements:
+    \begin{itemize}
+        \item Contributed to the construction of a dynamic national, provincial and local information system.
+        \item Worked extensively with multiple government databases, employing statistical methodologies for diverse analytical projects.
+        \item Assisted in building interactive geographical visualizations.
+        \item Played an instrumental role in identifying populations with pressing social demands, assessing program coverage, measuring service accessibility and calculating poverty metrics.
+        \item Rendered technical advice for social programs, provincial liaisons and international agreements.
+        \item Led the comprehensive redesign and restructuring of the website.
+    \end{itemize}
+}
+
+\cventry{2020 -- 2021}{Web Scraping and translation volunteer}{EndCoronavirus.org}{}{}{
+Assisted in a multi-disciplinary effort to combat COVID-19 by developing community-based solutions and promoting them to various stakeholders including policy-makers, businesses and individuals.\newline{}
+Detailed achievements:
+\begin{itemize}
+\item Developed an automated web scraper to efficiently separate the content of web pages into blocks for seamless translation.
+\item Utilized tools and libraries such as requests, urllib, bs4, lxml, and deep\_translator to facilitate the automation process.
+\item Collaborated in addressing challenges related to translation quotas to ensure accurate and timely content translation into multiple languages.
+\item Supported the team in integrating translated content into the website, enhancing accessibility for a global audience.
+\end{itemize}}
+
+%\cvitem{2009 -- 2011}{\textbf{Actuación como representante del Claustro de Estudiantes en la Comisión específica de carrera (CEC)} de la Licenciatura en Biotecnología y Biología Molecular.}
+%\cvitem{}{\textsc{Facultad de Cs.Exactas (FCE), Universidad Nacional de La Plata (UNLP).}}
+%\cvitem{}{Nro. de Expediente: 0700-001363 -- 2009 Resolución 0901.}
+
+%----------------------------------------------------------------------------------------
+%	PREMIOS, BECAS Y RECONOCIMIENTOS
+%----------------------------------------------------------------------------------------
+
+%\section{Becas, premios y reconocimientos}
+%
+%\cvitem{2022}{Beca del Hausdorff Research Institute for Mathematics para participar como expositor en la \textbf{Hausdorff School  "Inverse problems for multi-scale models"}. Bonn, Alemania.}
+%\cvitem{2021}{Beneplácito por el descubrimiento y recreación del mecanismo que permite la regeneración de la médula espinal en axolotl. \textbf{Senado de la Nación Argentina}.}
+%\cvitem{2020}{Ganador en el \textbf{MIT COVID19 Challenge} organizado por el Massachusetts Institute of Technology.}
+%%Temática: optimización de los recursos del estado y fondos privados para reactivar la economía informal.
+%\cvitem{2020}{Beca del New England Complex Systems Institute (NECSI) para participar como conferencista en la \textbf{10ma Conferencia internacional de Sistemas Complejos} (ICCS2020). Boston, Estados Unidos.}
+%\cvitem{2016}{Primer premio, otorgado por la Deutschen Gesellschaft für Kinder-und Jugendmedizin (DGKJ) e.V. para el poster titulado \textit{"Familiärer Chilblain Lupus durch eine aktivierende Mutation in STING"}, presentado en la DGKJ, Hamburgo, Alemania.}
+%\cvitem{2016}{Great! ipid4all grant (\textbf{group2group exchange for academic talents}), Graduate Academy of the Technische Universität Dresden. 2016-2017.}
+%\cvitem{2015}{Beca del CELFI (\textbf{Centro Latinoamericano de Formación Interdiciplinaria}), \textsc{Sociedad Argentina de Biofísica (SAB), Latinamerican Federation of Biophysical Societies (LAFeBS) y CONICET }.}
+%\cvitem{2015}{Beca interna doctoral otorgada por el Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET).}
+
+%----------------------------------------------------------------------------------------
+%	SUBSIDIOS
+%----------------------------------------------------------------------------------------
+
+%\section{Participación en proyectos de investigación}
+
+% Agregar SysVert
+%\cventry{2018--2020}{PICT 2017-2307: \textit{"Cascada de señalización versus mecánica tisular como fuerzas impulsoras de la regeneración de tejidos en el Axolotl"}}{}{}{CONICET}{Director: Dr. Osvaldo Chara}
+%\cventry{2017-2019}{ECOS 2016-A16B01: \textit{"Dissecting the molecular mechanism of bacterial DNA translocases"}}{Program of France-Argentina cooperation for the scientific and technological research}{}{}{Titular: O. Chara (Argentina) and M. Nöllmann (Francia)}
+%\cventry{2015--2017}{PICT 2014 - 3469: \textit{"Mecanismos de Regeeración de la médula espinal del Axolotl: Una aproximación de Biología de Sistemas"}}{}{}{CONICET}{Director: Dr. Osvaldo Chara}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICACIONES
+%----------------------------------------------------------------------------------------
+
+%\section{Publicaciones}
+%
+%\cventry{2021}{\textit{"Spatiotemporal control of cell cycle acceleration during axolotl spinal cord regeneration"}}{}{}{}{eLife 2021;10:e55665}
+%%\textbf{Emanuel Cura Costa}, Leo Otsuki, Aida Rodrigo Albors, Elly M. Tanaka, Osvaldo Chara
+%
+%\cventry{2022}{\textit{"Photosensitivity and cGAS-dependent type I IFN activation in lupus patients with TREX1 deficiency"}}{}{}{}{J Invest Dermatol. 2022 Mar;142(3 Pt A):633-640.e6}
+%%Berndt, Nicole; Wolf, Christine; Fischer, Kristina; \textbf{Cura Costa, Emanuel}; Knuschke, Peter; Zimmermann, Nick; Schmidt, Franziska; Merkel, Martin; Chara, Osvaldo; Lee-Kirsch, MinAe; Günther, Claudia
+%
+%\cventry{2017}{\textit{"Familial chilblain lupus due to a gain-of-function mutation in STING"}}{}{}{}{Annals of the Rheumatic Diseases 2017;76:468-472}
+%%Nadja König, Christoph Fiehn, Christine Wolf, Max Schuster, \textbf{Emanuel Cura Costa}, Victoria Tüngler, Hugo Ariel Alvarez, Osvaldo Chara, Kerstin Engel,Raphaela Goldbach-Mansky, Claudia Günther, Min Ae Lee-Kirsch
+
+%----------------------------------------------------------------------------------------
+%	PRESENTACIONES ORALES y ESCRITAS
+%----------------------------------------------------------------------------------------
+
+%\section{Presentaciones orales}
+%
+%\cventry{Agosto \\ 2022}{Presentación oral titulada "SysVert: an open-source cell-based modeling software fully implemented in Python"}{\textsc{Hausdorff School  "Inverse problems for multi-scale models"}}{}{Bonn, Alemania}{}
+%
+%\cventry{Julio \\ 2020}{Presentación oral titulada "A model of cells recruited by a spatiotemporal signalling pattern inducing cell cycle reduction during axolotl spinal cord regeneration."}{\textsc{$10^{th}$ Tenth International Conference on Complex Systems (ICCS2020)}}{}{Boston, Estados Unidos}{}
+%
+%\cventry{Noviembre \\ 2019}{Presentación oral titulada "Regeneración de tejidos animales, una aproximación de biología de sistemas."}{\textsc{$6^{tas}$ Jornadas de tesistas y becarios del IFLySIB}}{}{La Plata, Argentina}{}
+%
+%\cventry{Mayo \\ 2017}{Workshop en \textit{"Reaction-Diffusion, Cell-based and Multi-scale models"}}{1st Latin American Workshop and Conference on Systems Biology}{CINVESTAV}{Ciudad de México, México}{}
+%
+%\cventry{Noviembre \\ 2016}{Presentación oral titulada \textit{"Multi-scale model of axolotl spinal cord during regeneration"}}{\textsc{Center for Information Services and High Performance Computing (ZIH)}}{Technische Universität Dresden (TUD)}{Dresden, Alemania}{}
+%
+%\cventry{Noviembre \\ 2015}{Presentación oral titulada "Acoplamiento entre células y procesos de señalización durante la regeneración de los tejidos: un enfoque de modelado basado en datos"}{\textsc{$2^{das}$ Jornadas de tesistas y becarios del IFLySIB}}{}{La Plata, Argentina}{}
+%
+%\section{Presentación de pósters}
+%
+%\cventry{Octubre \\ 2019}{Presentación de póster titulado \textit{"Hypothetical mechanism of neuromast regeneration in zebrafish based on cell proliferation depending on local interactions"}}{\textsc{LASDB Meeting 2019 Xth Meeting of the Latin American Society for Developmental Biology}}{Fundación UADE}{Buenos Aires, Argentina}{}
+%
+%\cventry{Octubre \\ 2019}{Presentación de póster titulado \textit{"Computational package of a mechanical cell-based model to study tissues in developmental and regenerating conditions"}}{\textsc{LASDB Meeting 2019 Xth Meeting of the Latin American Society for Developmental Biology}}{Fundación UADE}{Buenos Aires, Argentina}{}
+%
+%\cventry{Octubre \\ 2019}{Presentación de póster titulado \textit{"Spatiotemporal distribution of a signal driving spinal cord regeneration in the axolotl"}}{\textsc{LASDB Meeting 2019 Xth Meeting of the Latin American Society for Developmental Biology}}{Fundación UADE}{Buenos Aires, Argentina}{}
+%
+%\cventry{Junio \\ 2018}{Presentación de póster titulado \textit{"Axolotl spinal cord regeneration triggered by a short-lived signaling process"}}{\textsc{CELFI - Datos}}{Ciudad Universitaria}{Buenos Aires, Argentina}{}
+%
+%\cventry{Mayo \\ 2017}{Presentación de póster titulado \textit{"Axolotl spinal cord regeneration: a data-driven mathematical model"}}{\textsc{1st Latin American Workshop and Conference on Systems Biology}}{CINVESTAV}{Ciudad de México, México}{}
+%
+%\cventry{Diciembre \\ 2015}{Presentación de póster titulado "Crosstalk of cells and signaling processes during tissue regeneration: a data-driven modelling approach"}{\textsc{Latin American Conference on Mathematical Modeling of Biological Systems}}{Universidad de Buenos Aires (UBA)}{Buenos Aires, Argentina}{}
+
+%----------------------------------------------------------------------------------------
+%	DOCENCIA
+%----------------------------------------------------------------------------------------
+
+%\section{Docencia}
+%
+%\cvitem{jefe de trabajos prácticos}{Cátedra de \textbf{Biofisicoquímica} del Departamento de Ciencias Biológicas (UNLP). Dedicación simple. 2021-actualidad.}
+%\cvitem{Ayudante diplomado}{Cátedra de \textbf{Biofisicoquímica} del Departamento de Ciencias Biológicas (UNLP). Dedicación simple. 2021}
+%\cvitem{Ayudante alumno}{Cátedra de \textbf{Biología} del Departamento de Ciencias Biológicas (UNLP). Dedicación simple. 2016-2021.}
+
+%\cventry{Julio \\ 2015}{\textsc{Charla: "Las ideas sobre estabilidad e interacción en estudiantes universitarios y la perspectiva del trabajo docente en el aula de ciencias"}}{}{a cargo del Dr. Osvaldo Cappannini}{\textsc{en el marco del Primer Ciclo de Actividades Formativas "Educación para la Extensión", Facultad de Cs. Exactas (FCE), Universidad Nacional de La Plata (UNLP)}}{Carga horaria total: 2 horas.}
+%\cventry{Junio \\ 2015}{\textsc{Charla: "Herramientas metodológicas para favorecer el aprendizaje de ciencias"}}{}{a cargo del Dr. Diego Petrucci}{\textsc{en el marco del Primer Ciclo de Actividades Formativas "Educación para la Extensión", Facultad de Cs. Exactas (FCE), Universidad Nacional de La Plata (UNLP)}}{Carga horaria total: 2 horas.}
+%\cventry{Junio \\ 2014}{\textsc{Taller de formación docente}}{}{Espacio pedagógico}{\textsc{Facultad de Cs. Exactas (FCE), Universidad Nacional de La Plata (UNLP)}}{Carga horaria total: 3 horas.}
+%\cventry{Diciembre \\ 2013}{\textsc{Talleres de formación docente}}{}{Espacio pedagógico}{\textsc{Facultad de Cs. Exactas (FCE), Universidad Nacional de La Plata (UNLP)}}{Carga horaria total: 9 horas.}
+
+%----------------------------------------------------------------------------------------
+%	CURSOS Y TALLERES
+%----------------------------------------------------------------------------------------
+
+%\section{Cursos y workshops}
+%
+%\cventry{2do semestre \\ 2019}{Curso de posgrado \textsc{"Métodos Estadísticos"}}{}{\textsc{Universidad Nacional Arturo Jauretche}}{}{Carga horaria total: 30 horas  (Aprobado).}
+%
+%\cventry{1er semestre \\ 2019}{Curso de posgrado \textsc{"Aprendizaje automático" (Parte de la Especialización en Inteligencia de Datos orientada a Big Data)}}{}{A cargo del Dr. Franco Ronchetti y Dr. Guillermo Leguizamón}{\textsc{Facultad de Informática (FI), Universidad Nacional de La Plata (UNLP)}}{Carga horaria total: 64 horas  (Con evaluación: 10/10).}
+%
+%\cventry{2do semestre \\ 2017}{Curso de posgrado \textsc{"Herramientas computacionales para científicos"}}{}{A cargo del Dr. Carlos Manuel Carlevaro y Dr. Luis Pugnaloni}{\textsc{Facultad de Cs. Exactas (FCE), Universidad Nacional de La Plata (UNLP)}}{Carga horaria total: 70 horas  (Con evaluación: 10/10).}
+%
+%%\cventry{2do semestre \\ 2015}{Curso de posgrado \textsc{"Fundamentos Epistemológicos e Históricos de la Enseñanza de las Ciencias"}}{}{A cargo del Dr. Diego Petrucci, Dr. Osvaldo Cappannini y Lic. Daniel O. Badagnani}{\textsc{Facultad de Cs. Exactas (FCE), Universidad Nacional de La Plata (UNLP)}}{Carga horaria total: 45 horas  (Con evaluación: 10/10).}
+%\cventry{2do semestre \\ 2015}{Curso de posgrado \textsc{"Fundamentos Epistemológicos e Históricos de la Enseñanza de las Ciencias"}}{}{A cargo del Dr. Diego Petrucci, Dr. Osvaldo Cappannini y Lic. Daniel O. Badagnani}{\textsc{Facultad de Cs. Exactas (FCE), Universidad Nacional de La Plata (UNLP)}}{Carga horaria total: 45 horas  (Con evaluación: 10/10).}
+%
+%\cventry{Octubre \\ 2015}{Curso “Transporte óptimo y análisis de datos”}{}{\textsc{Profesor Esteban G. Tabak (Courant Institute of Mathematical Sciences, New York University (NYU))}}{Instituto de Cálculo (IC), Facultad de Ciencias Exactas y Naturales (FCEyN) de la Universidad de Buenos Aires (UBA)}{40 horas (Con evaluación: 10/10).}
+%
+%\cventry{Abril \\ 2015}{Workshop Internacional Programa Raíces (MINCyT)}{"La matemática como herramienta para entender la biología / la biología como fuente de problemas matemáticos"}{\textsc{Facultad de Ciencias Exactas y Naturales, Universidad Nacional de Buenos Aires (UBA)}}{}{Red de científicos argentinos en el Noreste de EEUU.}
+%
+%\cventry{Julio \\ 2014}{Curso “Introducción a la biología de sistemas”}{}{\textsc{Facultad de Farmacia y Bioquímica (FFyB), Universidad Nacional de Buenos Aires (UBA)}}{Profesor a cargo Dr. Luis Acerenza}{20 horas.}
+%%Profesor a cargo Dr. Luis Acerenza
+%
+%\cventry{Octubre \\ 2013}{Curso "High Performance Programming for Molecular Dynamics"}{\textsc{Universidad Nacional de Rosario (UNR)}}{Dictado por el Computational Biology Lab (DLab) (Fundación Ciencia \& Vida (FC\&V), Chile)}{}{16 horas.}
+%%a cargo del Dr. Tomás Pérez Acle
+%
+%\cventry{Marzo \\ 2013}{Curso de postgrado "Modelamiento molecular de proteínas"}{\textsc{Facultad de Cs. Exactas (FCE), Universidad Nacional de La Plata (UNLP)}}{Dirección de la Dra.María Verónica Milesi}{}{18 horas (Con evaluación: Aprobado).}
+%%Dirección de la Dra.María Verónica Milesi
+%
+%\cventry{Septiembre \\ 2012}{Workshop de Filogenia Molecular}{\textsc{Universidad Nacional de Entre Ríos (UNER)}}{}{Auspiciado por la International Society for Computational Biology (ISCB)}{8 horas.}
+%
+%%\cventry{Octubre \\ 2013}{IV Argentinean Conference on Computational Biology and Bioinformatics and the IV Conference of the Iberoamerican Society for Bioinformatics}{}{}{\textsc{Centro Internacional Franco Argentino de Ciencias de la Información y de Sistemas (CIFASIS), Universidad Nacional de Rosario (UNR)}}{Organizado por la Asociación de Bioinformática y Biología Computacional (A\textsuperscript{2}B\textsuperscript{2}C) y la Sociedad Iberoamericana de Bioinformática (SoIBio).}
+%
+%\cventry{Septiembre \\ 2012}{Workshop de Producción de textos científicos en Latex}{\textsc{Universidad Nacional de Entre Ríos (UNER)}}{}{Auspiciado por la International Society for Computational Biology (ISCB)}{8 horas.}
+%
+%%\cventry{Mayo \\ 2012}{Curso “Inactivación y Reactivación de Biocatalizadores Enzimáticos”}{\textsc{Facultad de Cs. Exactas (FCE), Universidad Nacional de La Plata (UNLP)}}{}{Organizado por el Centro de I+D en fermentaciones industriales (CINDEFI)}{9 horas.}
+
+%----------------------------------------------------------------------------------------
+%	CONGRESOS JORNADAS SIMPOSIOS
+%----------------------------------------------------------------------------------------
+
+%\section{Asistencia a congresos, jornadas y simposios}
+
+%\cventry{Octubre \\ 2012}{XV Congreso Latinoamericano de Genética, XLI Congreso Argentino de Genética, XLV Congreso de la Sociedad de Genética de Chile y II Reunión Regional SAG-Litoral}{\textsc{Rosario}}{}{}{Organizado conjuntamente por la Asociación Latinoamericana de Genética (ALAG), la Sociedad Argentina de Genética (SAG) y la Sociedad de Genética de Chile.}
+
+%\cventry{Septiembre \\ 2012}{3\textsuperscript{er} Congreso Argentino de Bioinformática y Biología Computacional}{\textsc{Universidad Nacional de Entre Ríos (UNER)}}{}{}{Organizado por la Facultad de Ingeniría y la Asociación Argentina de Bioinformática y Biología Computacional (A\textsuperscript{2}B\textsuperscript{2}C).}
+
+%\cventry{Agosto \\ 2012}{41 Jornadas Argentinas de informática}{\textsc{Fac. de Informática (FI), Universidad Nacional de La Plata (UNLP)}}{}{}{Organizadas por la Sociedad Argentina de informática.}
+
+%\cventry{Junio \\ 2012}{1\textsuperscript{er} Congreso Regional de Estudiantes de Ciencias Exactas}{\textsc{Facultad de Cs.Exactas}}{UNLP}{}{Avalan: Fac. Cs. Exactas -- UNLP, UNICEN, CIC, CONICET.}
+
+%\cventry{Mayo \\ 2012}{2\textsuperscript{do} Simposio Argentino de Procesos Biotecnológicos}{\textsc{Facultad de Cs. Exactas (FCE), Universidad Nacional de la Plata (UNLP)}}{}{Organizado por el Centro de I+D en fermentaciones industriales (CINDEFI)}{CONICET | UNLP.}
+
+%\cventry{Octubre \\ 2011}{1\textsuperscript{ras} Jornadas de Biotecnología aplicada a la Medicina}{\textsc{Hospital Alemán, Capital Federal, Argentina}}{}{}{Auspiciadas por el ministerio de ciencia, tecnología e innovación productiva de la nación.}
+
+%\cventry{7 y 8 de Septiembre de 2012}{7\textsuperscript{mas} Jornadas de Actualización de la Asociación de Psicofarmacología y Neurociencia Argentina}{\textsc{Hotel Dazzler}}{San Martín}{}{Asociación de psicofarmacología y neurociencia argentina (APNA).}
 
 \section{Computer skills}
-\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+%\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
 
-\section{Skill matrix}
-\cvitem{Skill matrix}{Alternatively, provide a skill matrix to show off your skills}
+%\cvitem{Skill matrix}{Alternatively, provide a skill matrix to show off your skills}
 %% Skill matrix as an alternative to rate one's skills, computer or other.
 
 %% Adjusts width of skill matrix columns.
@@ -184,7 +408,7 @@ Detailed achievements:
 %% Add a legend if you are using \cvskill{<1-5>} command or \cvskillentry
 %% Usage \cvskilllegend[*][<post_padding>][<first_level>][<second_level>][<third_level>][<fourth_level>][<fifth_level>]{<name>}
 % \cvskilllegend % insert default legend without lines
-\cvskilllegend*[1em]{}% adjust post spacing
+%\cvskilllegend*[1em]{}% adjust post spacing
 % \cvskilllegend*{Legend}%  Alternatively add a description string
 %% adjust the legend entries for other languages, here German
 % \cvskilllegend[0.2em][Grundkenntnisse][Grundkenntnisse und eigene Erfahrung in Projekten][Umfangreiche Erfahrung in Projekten][Vertiefte Expertenkenntnisse][Experte\,/\,Spezialist]{Legende}
@@ -204,42 +428,63 @@ Detailed achievements:
 
 %% \cvskillentry[*][<post_padding>]{<skill_cathegory>}{<0-5>}{<skill_name>}{<years_of_experience>}{<comment>}%
 %% Example usages:
-\cvskillentry*{Language:}{3}{Python}{2}{I'm so experienced in Python and have realised a million projects. At least.}
-\cvskillentry{}{2}{Lilypond}{14}{So much sheet music! Man, I'm the best!}
-\cvskillentry{}{3}{\LaTeX}{14}{Clearly I rock at \LaTeX}
-\cvskillentry*{OS:}{3}{Linux}{2}{I only use Archlinux btw}% notice the use of the starred command and the optional
-\cvskillentry*[1em]{Methods}{4}{SCRUM}{8}{SCRUM master for 5 years}
+\cvskillentry*{OS:}{4}{GNU/Linux}{13}{Archlinux and Debian based}% notice the use of the starred command and the optional
+\cvskillentry*{Language:}{5}{Python}{10}{Extensive project experience}
+\cvskillentry*{Packages:}{5}{Pandas}{8}{Involved in almost all my projects}
+\cvskillentry{}{4}{SciPy}{7}{Statistics and diverse applications}
+\cvskillentry{}{5}{NumPy}{8}{Data and numerical analysis}
+\cvskillentry{}{5}{Seaborn and matplotlib}{8}{Data visualization}
+\cvskillentry{}{3}{Beautiful Soup and Requests}{4}{Web scraping in personal projects}
+\cvskillentry{}{2}{SQLAlchemy}{4}{Limited project usage}
+\cvskillentry{}{4}{PyQt and Qt Creator}{3}{Major solo project}
+\cvskillentry{}{3}{Glumpy}{3}{Major solo project}
+\cvskillentry{}{4}{OpenCV}{3}{Utilized in several projects}
+\cvskillentry{}{2}{PyTorch, Keras and Scikit-learn}{3}{Personal projects mainly}
+\cvskillentry{}{4}{Kivy}{8}{Solo project}
+\cvskillentry*{Others:}{4}{git}{6}{Extensive project experience}
+\cvskillentry{}{2}{Hugging Face}{3}{Personal projects mainly}
+\cvskillentry{}{2}{Obsidian}{1}{Already love it}
+\cvskillentry{}{5}{IPython}{8}{Extensively used}
+\cvskillentry{}{5}{PyCharm}{8}{Extensively used}
+
 %% \cvskill{<0-5>} command
 % \cvitem{\textbackslash{cvskill}:}{Skills can be visually expressed by the \textbackslash{cvskill} command, e.g. \cvskill{2}}
 
+\section{Languages}
+\cvitemwithcomment{Spanish}{Native}{}
+\cvitemwithcomment{English}{Advanced}{}
+
 \section{Interests}
-\cvitem{hobby 1}{Description}
-\cvitem{hobby 2}{Description}
-\cvitem{hobby 3}{Description}
+\cvitem{Brewing}{Operated a small brewery for 5 years producing 3,000 liters/month. Now, passionately crafting for friends, family and companions.}
+\cvitem{Basketball}{Passionate about competing and team play. Deep love for the sport.}
+\cvitem{Biking}{Enjoy touring and exploring; improving endurance, scenic views and engaging in deep conversations during rides.}
+\cvitem{Gaming}{Engaging in strategic PC games, valuing team-based challenges.}
+\cvitem{Reading}{Fascinated by philosophy, curious about diverse topics and keen on staying updated with recent scientific publications.}
+\cvitem{Learning}{Driven by an insatiable curiosity; constantly seeking knowledge and understanding.}
 
-\section{Extra 1}
-\cvlistitem{Item 1}
-\cvlistitem{Item 2}
-\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+%
+%\section{Extra 2}
+%\cvlistdoubleitem{Item 1}{Item 4}
+%\cvlistdoubleitem{Item 2}{Item 5\cite{book2}}
+%\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
 
-\section{Extra 2}
-\cvlistdoubleitem{Item 1}{Item 4}
-\cvlistdoubleitem{Item 2}{Item 5\cite{book2}}
-\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
-
-\section{References}
-\begin{cvcolumns}
-  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
-  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
-  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
-\end{cvcolumns}
+%\section{References}
+%\begin{cvcolumns}
+%  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
+%  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+%  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+%\end{cvcolumns}
 
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
 %  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
 
 % Publications from a BibTeX file using the multibib package
 %\section{Publications}
@@ -250,29 +495,35 @@ Detailed achievements:
 %\bibliographystylemisc{plain}
 %\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
 
-\clearpage
+%-----       signature       ---------------------------------------------------------
+\vfill
+\begin{tikzpicture}[remember picture, overlay]
+  \node[anchor=south east, xshift=-2cm, yshift=2cm] at (current page.south east) {\includegraphics[scale=0.9]{signature.png}};
+\end{tikzpicture}
+
+%\clearpage
 %-----       letter       ---------------------------------------------------------
 % recipient data
-\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
-\date{January 01, 1984}
-\subject{Job application}
-\opening{Dear Sir or Madam,}
-\closing{Yours faithfully,}
-\signature{0.9}{signature.png}                     % optional, remove / comment the line if not wanted: first argument goes to \includegraphics > scale
-\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
-\makelettertitle
+%\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+%\date{January 01, 1984}
+%\subject{Job application}
+%\opening{Dear Sir or Madam,}
+%\closing{Yours faithfully,}
+%\signature{0.9}{signature.png}                     % optional, remove / comment the line if not wanted: first argument goes to \includegraphics > scale
+%\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+%\makelettertitle
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+%Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+%
+%Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+%
+%Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+%
+%Albert Einstein discovered that $e=mc^2$ in 1905.
+%
+%\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
 
-Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
-
-Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
-
-Albert Einstein discovered that $e=mc^2$ in 1905.
-
-\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
-
-\makeletterclosing
+%\makeletterclosing
 
 %\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
